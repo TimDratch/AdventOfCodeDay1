@@ -1,10 +1,6 @@
-﻿using System.ComponentModel;
-using System.Security.Cryptography.X509Certificates;
-using System.Threading;
-
-namespace AdventOfCodeDay1P1
+﻿namespace Day1
 {
-    public class Program
+    public class Day1
     {
         public static void Main()
         {
@@ -20,8 +16,8 @@ namespace AdventOfCodeDay1P1
 
             var first = val.Where(x => Char.IsDigit(x)).FirstOrDefault();
             var last = val.Where(x => Char.IsDigit(x)).LastOrDefault();
-            var final = string.Concat(first, last);
-            return int.Parse(final);
+
+            return int.Parse(string.Concat(first, last));
         }
 
         public static string ReplaceWord(string val)
